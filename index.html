@@ -671,28 +671,27 @@ form.addEventListener('submit',async(e)=>{
   }
   if(form._honey.value){return;} // spam bot
   btn.disabled=true;const old=btn.textContent;btn.textContent='Изпращане...';
-  const data={};
+  const data={
+    access_key:'0a730b81-db12-4c29-be80-dd82e143916d',
+    subject:'Ново запитване от сайта - Самурай',
+    from_name:'Сайт Самурай'
+  };
   new FormData(form).forEach((v,k)=>{if(k!=='_honey')data[k]=v;});
-  data._subject='Ново запитване от сайта - Самурай';
-  data._template='table';
+  data.replyto=data['Имейл']||'';
   try{
-    const res=await fetch('https://formsubmit.co/ajax/zdrave.sila.jivot@gmail.com',{
+    const res=await fetch('https://api.web3forms.com/submit',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify(data)
     });
     const out=await res.json();
-    if(res.ok&&(out.success===true||out.success==='true')){
+    if(out.success){
       if(window.fbq){fbq('track','Lead',{content_name:data['Услуга']||'Запитване'});}
       msg.className='form-msg ok';
       msg.textContent='Благодаря! Заявката е изпратена успешно. Ще се свържа с теб възможно най-скоро.';
       form.reset();
-    }else if(out && /activat|confirm|потвърд/i.test(String(out.message||''))){
-      msg.className='form-msg ok';
-      msg.textContent='Заявката е приета! Формата се активира еднократно: моля потвърдете от имейла, който току-що изпратихме, и след това всички запитвания пристигат автоматично.';
-      form.reset();
     }else{
-      throw new Error('fail');
+      throw new Error(out.message||'fail');
     }
   }catch(err){
     msg.className='form-msg err';
