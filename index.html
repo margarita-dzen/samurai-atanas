@@ -180,9 +180,19 @@ header.scrolled .burger span{background:var(--purple)}
 .offer h2 .accent{color:var(--teal)}
 .offer p{font-size:1.08rem;color:#ece8f0;margin-bottom:16px;max-width:560px}
 .price-row{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0 30px}
-.price-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:16px 22px;backdrop-filter:blur(6px)}
+.price-chip{position:relative;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:16px 22px;backdrop-filter:blur(6px)}
 .price-chip .big{font-family:'Oswald';font-size:2.1rem;font-weight:700;color:#fff;line-height:1}
 .price-chip .lbl{font-size:.84rem;color:var(--blue);font-weight:600;margin-top:4px}
+.price-chip--main{border-color:rgba(131,180,178,.55);background:rgba(131,180,178,.16)}
+.price-chip--main .big{color:var(--teal)}
+.price-old{font-family:'Oswald';font-size:1.15rem;font-weight:600;color:#d7c8e2;text-decoration:line-through;text-decoration-color:var(--teal);line-height:1;margin-bottom:3px}
+.discount-badge{position:absolute;top:-12px;right:-10px;background:var(--teal);color:var(--purple-deep);font-family:'Oswald';font-weight:700;font-size:.86rem;letter-spacing:.5px;padding:4px 11px;border-radius:999px;box-shadow:0 5px 14px rgba(0,0,0,.3)}
+.countdown{margin:4px 0 26px}
+.cd-label{font-family:'Oswald';text-transform:uppercase;letter-spacing:2px;font-size:.82rem;font-weight:600;color:var(--teal);margin-bottom:11px}
+.cd-boxes{display:flex;gap:10px}
+.cd-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:11px 6px;min-width:64px;text-align:center;backdrop-filter:blur(6px)}
+.cd-box span{display:block;font-family:'Oswald';font-weight:700;font-size:1.75rem;color:#fff;line-height:1;font-variant-numeric:tabular-nums}
+.cd-box small{display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:1px;color:var(--blue);margin-top:5px}
 .offer-photo img,.offer-photo video{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);aspect-ratio:3/4;object-fit:cover;display:block}
 .offer-list{list-style:none;margin:0 0 24px}
 .offer-list li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:1.02rem;color:#f0ece6}
@@ -412,7 +422,7 @@ footer a:hover{color:var(--teal)}
   <div class="wrap offer-grid">
     <div class="offer-text reveal">
       <span class="eyebrow">Специална оферта</span>
-      <h2>Консултация за 40€ и <span class="accent">безплатна тренировка на плажа</span></h2>
+      <h2>Консултация с 20% отстъпка + <span class="accent">безплатна тренировка на плажа</span></h2>
       <p>Консултацията включва изготвяне на персонална програма за изграждане на здравословни навици и хранителен режим, съобразен с твоите индивидуални нужди и предпочитания.</p>
       <ul class="offer-list">
         <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg>Персонална програма за здравословни навици</li>
@@ -420,8 +430,22 @@ footer a:hover{color:var(--teal)}
         <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg>От медицинско лице с над 10 години опит и работа с пациенти</li>
       </ul>
       <div class="price-row">
-        <div class="price-chip"><div class="big">40€</div><div class="lbl">Консултация</div></div>
+        <div class="price-chip price-chip--main">
+          <div class="discount-badge">-20%</div>
+          <div class="price-old">40€</div>
+          <div class="big">32€</div>
+          <div class="lbl">Консултация</div>
+        </div>
         <div class="price-chip"><div class="big">Безплатно</div><div class="lbl">Тренировка на плажа</div></div>
+      </div>
+      <div class="countdown">
+        <div class="cd-label">Офертата изтича до:</div>
+        <div class="cd-boxes">
+          <div class="cd-box"><span id="cd-d">00</span><small>дни</small></div>
+          <div class="cd-box"><span id="cd-h">00</span><small>часа</small></div>
+          <div class="cd-box"><span id="cd-m">00</span><small>мин</small></div>
+          <div class="cd-box"><span id="cd-s">00</span><small>сек</small></div>
+        </div>
       </div>
       <a class="btn btn-teal" href="#signup">Запиши се сега</a>
     </div>
@@ -616,6 +640,23 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 // Year
 document.getElementById('yr').textContent=new Date().getFullYear();
+
+// Offer countdown (72h per visitor, stored in localStorage)
+(function(){
+  var KEY='samurai_offer_deadline', DUR=72*3600*1000;
+  var dl=parseInt(localStorage.getItem(KEY),10);
+  if(!dl||isNaN(dl)){ dl=Date.now()+DUR; try{localStorage.setItem(KEY,String(dl));}catch(e){} }
+  var elD=document.getElementById('cd-d'),elH=document.getElementById('cd-h'),elM=document.getElementById('cd-m'),elS=document.getElementById('cd-s');
+  function p(n){return String(n).padStart(2,'0');}
+  function tick(){
+    var diff=dl-Date.now(); if(diff<0)diff=0;
+    if(elD)elD.textContent=p(Math.floor(diff/86400000));
+    if(elH)elH.textContent=p(Math.floor(diff%86400000/3600000));
+    if(elM)elM.textContent=p(Math.floor(diff%3600000/60000));
+    if(elS)elS.textContent=p(Math.floor(diff%60000/1000));
+  }
+  if(elD){ tick(); setInterval(tick,1000); }
+})();
 
 // Form submit -> FormSubmit AJAX + Meta Pixel Lead
 const form=document.getElementById('signupForm');
