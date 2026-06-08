@@ -116,10 +116,13 @@ header.scrolled .burger span{background:var(--purple)}
 .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 
 /* Hero */
-.hero{min-height:100svh;display:flex;align-items:center;color:#fff;
-  background:linear-gradient(180deg,rgba(58,39,69,.78),rgba(58,39,69,.55) 40%,rgba(58,39,69,.85)),url('assets/img/hero.jpg') center/cover no-repeat;
-  padding:120px 0 70px}
-.hero-inner{max-width:780px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;padding:120px 0 70px;overflow:hidden;background:#3a2745}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(58,39,69,.80),rgba(58,39,69,.5) 42%,rgba(58,39,69,.90))}
+.hero-inner{max-width:780px;position:relative;z-index:2}
+.btn-call{background:#fff;color:var(--purple);margin-top:14px;box-shadow:0 10px 26px rgba(0,0,0,.28)}
+.btn-call:hover{transform:translateY(-2px);background:var(--blue);color:var(--purple-deep)}
+.btn-call svg{width:20px;height:20px}
 .hero h1{font-size:clamp(2.5rem,7vw,4.6rem);margin:18px 0 18px;text-shadow:0 4px 30px rgba(0,0,0,.35);font-weight:700}
 .hero h1 .accent{color:var(--teal)}
 .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.32rem);max-width:620px;color:#f0ece6;font-weight:500}
@@ -145,9 +148,9 @@ header.scrolled .burger span{background:var(--purple)}
 .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:54px;align-items:center}
 .about-photo{position:relative}
 .about-photo img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);aspect-ratio:4/5;object-fit:cover;object-position:center top}
-.about-photo .seal{position:absolute;bottom:-26px;right:-18px;width:108px;height:108px;background:#fff;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);padding:10px}
-.about-photo .seal img{width:100%}
+.about-photo .seal{position:absolute;bottom:-26px;right:-18px;width:118px;height:118px;background:#fff;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);overflow:hidden;padding:0}
+.about-photo .seal img{width:86%;height:86%;object-fit:contain}
 .about-body h2{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--purple);margin:12px 0 18px;font-weight:700}
 .about-body p{margin-bottom:16px;font-size:1.05rem}
 .about-body strong{color:var(--purple)}
@@ -180,7 +183,7 @@ header.scrolled .burger span{background:var(--purple)}
 .price-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:16px 22px;backdrop-filter:blur(6px)}
 .price-chip .big{font-family:'Oswald';font-size:2.1rem;font-weight:700;color:#fff;line-height:1}
 .price-chip .lbl{font-size:.84rem;color:var(--blue);font-weight:600;margin-top:4px}
-.offer-photo img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);aspect-ratio:3/4;object-fit:cover}
+.offer-photo img,.offer-photo video{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);aspect-ratio:3/4;object-fit:cover;display:block}
 .offer-list{list-style:none;margin:0 0 24px}
 .offer-list li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:1.02rem;color:#f0ece6}
 .offer-list svg{width:22px;height:22px;color:var(--teal);flex:0 0 22px;margin-top:3px}
@@ -188,10 +191,11 @@ header.scrolled .burger span{background:var(--purple)}
 /* Carousel */
 .gallery{background:var(--cream)}
 .carousel-wrap{position:relative}
-.carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carousel{display:grid;grid-auto-flow:column;grid-template-rows:repeat(2,1fr);gap:16px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 4px 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .carousel::-webkit-scrollbar{display:none}
-.carousel .slide{flex:0 0 auto;width:300px;scroll-snap-align:center}
-.carousel .slide img{width:100%;height:400px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+.carousel .slide{width:230px;scroll-snap-align:start}
+.carousel .slide img,.carousel .slide video{width:100%;height:248px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);display:block;background:#3a2745}
+@media (max-width:480px){.carousel .slide{width:190px}.carousel .slide img,.carousel .slide video{height:220px}}
 .car-btns{display:flex;gap:12px;justify-content:center;margin-top:8px}
 .car-btn{width:52px;height:52px;border-radius:50%;border:2px solid var(--purple);background:#fff;color:var(--purple);
   display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;box-shadow:var(--shadow-sm)}
@@ -276,7 +280,8 @@ footer a:hover{color:var(--teal)}
   .navlinks a.link{color:#fff !important;font-size:1.2rem}
   header.scrolled .navlinks a.link{color:#fff}
   .nav-cta{width:100%;text-align:center}
-  .sec{padding:60px 0}
+  .sec{padding:42px 0}
+  .sec-head{margin-bottom:26px}
   .services-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .reviews{columns:1}
@@ -316,6 +321,10 @@ footer a:hover{color:var(--teal)}
 
 <!-- HERO -->
 <section class="hero" id="hero">
+  <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg">
+    <source src="assets/video/hero.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
     <span class="eyebrow" style="color:var(--teal)">Здраве · Сила · Живот</span>
     <h1>Промени живота си, започвайки от <span class="accent">тялото и мислите</span></h1>
@@ -329,6 +338,7 @@ footer a:hover{color:var(--teal)}
       <a class="btn btn-teal" href="#signup">Запиши консултация за 40€</a>
       <a class="btn btn-ghost" href="#offer">Безплатна тренировка на плажа</a>
     </div>
+    <a class="btn btn-call" href="tel:+359884373639"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 5a2 2 0 0 1 2-2h2.6a1 1 0 0 1 .96.73l1.1 4a1 1 0 0 1-.27 1L7 10.5a14 14 0 0 0 6.5 6.5l1.77-1.4a1 1 0 0 1 1-.26l4 1.1a1 1 0 0 1 .73.95V20a2 2 0 0 1-2 2A18 18 0 0 1 2 5Z"/></svg>Обади се: 088 437 3639</a>
     <div class="hero-rating">
       <span class="stars">★★★★★</span>
       <span>5,0 в Google</span>
@@ -340,7 +350,7 @@ footer a:hover{color:var(--teal)}
 <section class="sec about" id="about">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
-      <img src="assets/img/portrait.jpg" alt="Атанас Костадинов, треньор" loading="lazy" />
+      <img src="assets/img/coach-arms.jpg" alt="Атанас Костадинов, треньор" loading="lazy" />
       <div class="seal"><img src="assets/img/logo.png" alt="Лого Самурай" /></div>
     </div>
     <div class="about-body reveal">
@@ -418,7 +428,9 @@ footer a:hover{color:var(--teal)}
       <a class="btn btn-teal" href="#signup">Запиши се сега</a>
     </div>
     <div class="offer-photo reveal">
-      <img src="assets/img/beach.jpg" alt="Тренировка на плажа в Бургас" loading="lazy" />
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/video/offer.jpg" aria-label="Тренировка на плажа в Бургас">
+        <source src="assets/video/offer.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
 </section>
@@ -434,16 +446,18 @@ footer a:hover{color:var(--teal)}
   </div>
   <div class="wrap carousel-wrap">
     <div class="carousel" id="carousel">
+      <div class="slide"><video autoplay muted loop playsinline preload="none" poster="assets/video/g1.jpg"><source src="assets/video/g1.mp4" type="video/mp4"></video></div>
       <div class="slide"><img src="assets/img/host-duo.jpg" alt="Атанас води спортно събитие" loading="lazy"></div>
       <div class="slide"><img src="assets/img/warmup-arms.jpg" alt="Загрявка преди маратон" loading="lazy"></div>
       <div class="slide"><img src="assets/img/host-stage1.jpg" alt="Атанас на сцена пред публика" loading="lazy"></div>
+      <div class="slide"><video autoplay muted loop playsinline preload="none" poster="assets/video/g2.jpg"><source src="assets/video/g2.mp4" type="video/mp4"></video></div>
       <div class="slide"><img src="assets/img/run-action.jpg" alt="Атанас бяга маратон" loading="lazy"></div>
       <div class="slide"><img src="assets/img/warmup-crowd2.jpg" alt="Групова загрявка с деца" loading="lazy"></div>
       <div class="slide"><img src="assets/img/beach-pushups.jpg" alt="Тренировка на плажа" loading="lazy"></div>
-      <div class="slide"><img src="assets/img/run-road.jpg" alt="Бягане на маратон" loading="lazy"></div>
+      <div class="slide"><video autoplay muted loop playsinline preload="none" poster="assets/video/g3.jpg"><source src="assets/video/g3.mp4" type="video/mp4"></video></div>
       <div class="slide"><img src="assets/img/host-stage2.jpg" alt="Водещ на спортно събитие" loading="lazy"></div>
       <div class="slide"><img src="assets/img/warmup-lead.jpg" alt="Атанас води загрявка" loading="lazy"></div>
-      <div class="slide"><img src="assets/img/coach-arms.jpg" alt="Атанас Костадинов" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/portrait.jpg" alt="Атанас Костадинов" loading="lazy"></div>
       <div class="slide"><img src="assets/img/outdoor-pushups.jpg" alt="Тренировка на открито" loading="lazy"></div>
       <div class="slide"><img src="assets/img/warmup-crowd1.jpg" alt="Загрявка с над 2000 човека" loading="lazy"></div>
     </div>
@@ -469,7 +483,7 @@ footer a:hover{color:var(--teal)}
           <div class="score">5,0</div>
           <div class="stars2">★★★★★</div>
         </div>
-        <div class="sub">11 отзива<br>в Google</div>
+        <div class="sub">Оценка<br>в Google</div>
       </div>
     </div>
     <div class="reviews reveal">
@@ -491,7 +505,7 @@ footer a:hover{color:var(--teal)}
   <div class="wrap form-grid">
     <div class="form-info reveal">
       <span class="eyebrow" style="color:var(--teal)">Запиши се</span>
-      <h2>Започни <span class="accent">днес</span></h2>
+      <h2>Започни промяна днес и <span class="accent">се присъедини към нас</span></h2>
       <p>Остави данните си и ще се свържа с теб за час за консултация и безплатната ти тренировка на плажа.</p>
       <div class="contact-line"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 5a2 2 0 0 1 2-2h2.6a1 1 0 0 1 .96.73l1.1 4a1 1 0 0 1-.27 1L7 10.5a14 14 0 0 0 6.5 6.5l1.77-1.4a1 1 0 0 1 1-.26l4 1.1a1 1 0 0 1 .73.95V20a2 2 0 0 1-2 2A18 18 0 0 1 2 5Z"/></svg><a href="tel:+359884373639">088 437 3639</a></div>
       <div class="contact-line"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v14H3zM3 7l9 6 9-6"/></svg><a href="mailto:zdrave.sila.jivot@gmail.com">zdrave.sila.jivot@gmail.com</a></div>
