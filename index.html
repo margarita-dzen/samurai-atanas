@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Самурай · Атанас Костадинов | Здраве, Сила и Живот · Бургас</title>
+<meta name="description" content="Персонални и групови тренировки, планински преходи и хранителен режим с Атанас Костадинов, медицинско лице и сертифициран планински водач в Бургас. Консултация за 40€ и безплатна тренировка на плажа." />
+<meta name="theme-color" content="#4d355a" />
+<link rel="icon" type="image/png" href="assets/img/logo-small.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Самурай · Атанас Костадинов | Здраве, Сила и Живот" />
+<meta property="og:description" content="Тренировки, планински преходи и хранителен режим от медицинско лице. Консултация за 40€ и безплатна тренировка на плажа в Бургас." />
+<meta property="og:image" content="assets/img/hero.jpg" />
+<meta property="og:locale" content="bg_BG" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet" />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1337784721607046');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1337784721607046&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+:root{
+  --purple:#4d355a;
+  --purple-deep:#3a2745;
+  --purple-soft:#7a5a9e;
+  --teal:#83b4b2;
+  --teal-deep:#5f928f;
+  --blue:#c9e9e6;
+  --cream:#eef3f1;
+  --paper:#f7faf9;
+  --ink:#2b2230;
+  --ink-soft:#5b5266;
+  --white:#ffffff;
+  --shadow-sm:0 2px 8px rgba(61,42,69,.08);
+  --shadow:0 14px 40px rgba(61,42,69,.12);
+  --shadow-lg:0 24px 70px rgba(61,42,69,.20);
+  --radius:18px;
+  --radius-lg:26px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,.display{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.05;letter-spacing:.5px;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+section{position:relative}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:3px;font-weight:600;font-size:.82rem;color:var(--teal-deep)}
+.muted{color:var(--ink-soft)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;font-weight:600;
+  padding:15px 28px;border-radius:999px;cursor:pointer;border:2px solid transparent;
+  font-size:1rem;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease;
+  min-height:52px;white-space:nowrap;
+}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 10px 26px rgba(77,53,90,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(77,53,90,.45);background:var(--purple-deep)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7);backdrop-filter:blur(4px)}
+.btn-ghost:hover{background:#fff;color:var(--purple);transform:translateY(-2px)}
+.btn-teal{background:var(--teal);color:var(--purple-deep)}
+.btn-teal:hover{transform:translateY(-2px);background:var(--teal-deep);color:#fff}
+.btn:focus-visible{outline:3px solid var(--purple-soft);outline-offset:3px}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease,padding .3s ease}
+header.scrolled{background:rgba(247,250,249,.92);backdrop-filter:blur(12px);box-shadow:var(--shadow-sm)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:var(--maxw);margin:0 auto}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{width:46px;height:46px;filter:drop-shadow(0 3px 6px rgba(0,0,0,.18))}
+.brand b{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:1.25rem;color:#fff;font-weight:700;line-height:1}
+.brand small{display:block;font-family:'Manrope';text-transform:none;letter-spacing:1px;font-size:.62rem;font-weight:600;color:var(--blue);margin-top:2px}
+header.scrolled .brand b{color:var(--purple)}
+header.scrolled .brand small{color:var(--teal-deep)}
+.navlinks{display:flex;align-items:center;gap:26px}
+.navlinks a.link{font-weight:600;font-size:.95rem;color:#fff;position:relative;transition:color .2s}
+.navlinks a.link::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--teal);transition:width .25s}
+.navlinks a.link:hover::after{width:100%}
+header.scrolled .navlinks a.link{color:var(--ink)}
+.navlinks a.link:hover{color:var(--teal)}
+header.scrolled .navlinks a.link:hover{color:var(--purple)}
+.nav-cta{padding:11px 22px;min-height:44px;font-size:.9rem}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px;z-index:120}
+.burger span{width:26px;height:3px;background:#fff;border-radius:3px;transition:.3s}
+header.scrolled .burger span{background:var(--purple)}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;align-items:center;color:#fff;
+  background:linear-gradient(180deg,rgba(58,39,69,.78),rgba(58,39,69,.55) 40%,rgba(58,39,69,.85)),url('assets/img/hero.jpg') center/cover no-repeat;
+  padding:120px 0 70px}
+.hero-inner{max-width:780px}
+.hero h1{font-size:clamp(2.5rem,7vw,4.6rem);margin:18px 0 18px;text-shadow:0 4px 30px rgba(0,0,0,.35);font-weight:700}
+.hero h1 .accent{color:var(--teal)}
+.hero p.lead{font-size:clamp(1.05rem,2.2vw,1.32rem);max-width:620px;color:#f0ece6;font-weight:500}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 32px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+  padding:9px 16px;border-radius:999px;font-size:.86rem;font-weight:600;backdrop-filter:blur(6px)}
+.badge svg{width:18px;height:18px;color:var(--teal)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-rating{display:flex;align-items:center;gap:10px;margin-top:28px;font-weight:600;font-size:.95rem}
+.stars{color:#f6c945;letter-spacing:2px;font-size:1.1rem}
+
+/* Section heading */
+.sec{padding:84px 0}
+.sec-head{max-width:680px;margin-bottom:44px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(2rem,5vw,3.1rem);color:var(--purple);margin:12px 0 14px;font-weight:700}
+.sec-head p{font-size:1.08rem}
+.divider{width:64px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--teal),var(--purple-soft))}
+.sec-head.center .divider{margin:0 auto}
+
+/* About */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:54px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);aspect-ratio:4/5;object-fit:cover;object-position:center top}
+.about-photo .seal{position:absolute;bottom:-26px;right:-18px;width:108px;height:108px;background:#fff;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);padding:10px}
+.about-photo .seal img{width:100%}
+.about-body h2{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--purple);margin:12px 0 18px;font-weight:700}
+.about-body p{margin-bottom:16px;font-size:1.05rem}
+.about-body strong{color:var(--purple)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.step{background:#fff;border-radius:var(--radius);padding:22px 18px;box-shadow:var(--shadow-sm);border:1px solid rgba(131,180,178,.3)}
+.step .num{font-family:'Oswald';font-size:1.5rem;font-weight:700;color:#fff;background:var(--purple);width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.step h4{font-size:1.1rem;color:var(--purple);margin-bottom:6px}
+.step p{font-size:.92rem;color:var(--ink-soft);line-height:1.5}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);min-height:340px;display:flex;align-items:flex-end;
+  background-size:cover;background-position:center;transition:transform .35s ease,box-shadow .35s ease}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.svc::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,39,69,.05) 30%,rgba(58,39,69,.55) 60%,rgba(58,39,69,.92));z-index:1}
+.svc-body{position:relative;z-index:2;padding:28px;color:#fff}
+.svc-body .ico{width:50px;height:50px;border-radius:14px;background:rgba(131,180,178,.92);display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.svc-body .ico svg{width:26px;height:26px;color:var(--purple-deep)}
+.svc-body h3{font-size:1.5rem;margin-bottom:8px;font-weight:600}
+.svc-body p{font-size:.97rem;color:#ece8f0;line-height:1.5}
+
+/* Offer */
+.offer{background:linear-gradient(135deg,var(--purple-deep),var(--purple) 60%,#5d4170);color:#fff;overflow:hidden}
+.offer-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.offer .eyebrow{color:var(--teal)}
+.offer h2{font-size:clamp(2rem,5vw,3rem);margin:14px 0 18px;font-weight:700}
+.offer h2 .accent{color:var(--teal)}
+.offer p{font-size:1.08rem;color:#ece8f0;margin-bottom:16px;max-width:560px}
+.price-row{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0 30px}
+.price-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:16px 22px;backdrop-filter:blur(6px)}
+.price-chip .big{font-family:'Oswald';font-size:2.1rem;font-weight:700;color:#fff;line-height:1}
+.price-chip .lbl{font-size:.84rem;color:var(--blue);font-weight:600;margin-top:4px}
+.offer-photo img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);aspect-ratio:3/4;object-fit:cover}
+.offer-list{list-style:none;margin:0 0 24px}
+.offer-list li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:1.02rem;color:#f0ece6}
+.offer-list svg{width:22px;height:22px;color:var(--teal);flex:0 0 22px;margin-top:3px}
+
+/* Carousel */
+.gallery{background:var(--cream)}
+.carousel-wrap{position:relative}
+.carousel{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{display:none}
+.carousel .slide{flex:0 0 auto;width:300px;scroll-snap-align:center}
+.carousel .slide img{width:100%;height:400px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+.car-btns{display:flex;gap:12px;justify-content:center;margin-top:8px}
+.car-btn{width:52px;height:52px;border-radius:50%;border:2px solid var(--purple);background:#fff;color:var(--purple);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;box-shadow:var(--shadow-sm)}
+.car-btn:hover{background:var(--purple);color:#fff;transform:translateY(-2px)}
+.car-btn svg{width:24px;height:24px}
+
+/* Testimonials */
+.rev-badge{display:inline-flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:14px 22px;box-shadow:var(--shadow);margin:0 auto 40px;border:1px solid rgba(131,180,178,.3)}
+.rev-badge .g{width:34px;height:34px}
+.rev-badge .score{font-family:'Oswald';font-size:1.9rem;font-weight:700;color:var(--purple);line-height:1}
+.rev-badge .stars2{color:#f6c945;letter-spacing:1px;font-size:1rem}
+.rev-badge .sub{font-size:.82rem;color:var(--ink-soft);font-weight:600}
+.reviews{columns:3;column-gap:24px}
+.review{break-inside:avoid;background:#fff;border-radius:var(--radius);padding:24px;margin-bottom:24px;box-shadow:var(--shadow-sm);border:1px solid #eceaf0}
+.review .stars2{color:#f6c945;letter-spacing:1px;font-size:1rem;margin-bottom:10px}
+.review p{font-size:.98rem;color:var(--ink);line-height:1.6;margin-bottom:16px}
+.review .who{display:flex;align-items:center;gap:12px}
+.review .av{width:42px;height:42px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-weight:600;font-size:1.1rem;flex:0 0 42px}
+.review .who b{font-size:.95rem;display:block;color:var(--ink)}
+.review .who span{font-size:.78rem;color:var(--ink-soft)}
+
+/* Form */
+.signup{background:linear-gradient(135deg,#3a2745,#4d355a);color:#fff}
+.form-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.form-info h2{font-size:clamp(2rem,5vw,3rem);color:#fff;margin:14px 0 16px;font-weight:700}
+.form-info h2 .accent{color:var(--teal)}
+.form-info p{font-size:1.08rem;color:#ece8f0;margin-bottom:20px}
+.form-info .contact-line{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-weight:600}
+.form-info .contact-line svg{width:22px;height:22px;color:var(--teal);flex:0 0 22px}
+.form-card{background:#fff;border-radius:var(--radius-lg);padding:34px;box-shadow:var(--shadow-lg)}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;font-size:.9rem;color:var(--purple);margin-bottom:7px}
+.field label .req{color:#c0392b}
+.field input,.field select,.field textarea{
+  width:100%;padding:14px 16px;border:1.5px solid #d9dde0;border-radius:12px;font-family:inherit;font-size:1rem;color:var(--ink);
+  background:#fbfcfc;transition:border .2s,box-shadow .2s;min-height:50px}
+.field textarea{min-height:108px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(131,180,178,.25)}
+.form-card .btn{width:100%}
+.form-note{font-size:.78rem;color:var(--ink-soft);margin-top:14px;text-align:center;line-height:1.5}
+.form-msg{display:none;border-radius:14px;padding:18px;font-weight:600;margin-top:6px;text-align:center}
+.form-msg.ok{display:block;background:#e7f4ec;color:#1e7d4b;border:1px solid #b6e2c8}
+.form-msg.err{display:block;background:#fbeae9;color:#b02a23;border:1px solid #f0c2bf}
+.hp{position:absolute;left:-9999px}
+
+/* Footer */
+footer{background:var(--purple-deep);color:#d9d2e2;padding:60px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+.foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.foot-brand img{width:64px;height:64px}
+.foot-brand b{font-family:'Oswald';text-transform:uppercase;letter-spacing:2px;font-size:1.4rem;color:#fff}
+.foot-brand small{display:block;font-size:.7rem;color:var(--teal);letter-spacing:1px;margin-top:2px}
+footer h4{color:#fff;font-size:1.05rem;margin-bottom:16px;letter-spacing:1px}
+footer .fline{display:flex;gap:11px;align-items:flex-start;margin-bottom:12px;font-size:.95rem}
+footer .fline svg{width:20px;height:20px;color:var(--teal);flex:0 0 20px;margin-top:2px}
+footer a:hover{color:var(--teal)}
+.socials{display:flex;gap:12px;margin-top:6px}
+.socials a{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:.2s}
+.socials a:hover{background:var(--teal);transform:translateY(-2px)}
+.socials svg{width:22px;height:22px;color:#fff}
+.map-embed{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:3px solid rgba(255,255,255,.1)}
+.map-embed iframe{display:block;width:100%;height:200px;border:0;filter:grayscale(.2)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.84rem;color:#a99fbb}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Mobile */
+@media (max-width:900px){
+  .about-grid,.offer-grid,.form-grid{grid-template-columns:1fr;gap:34px}
+  .offer-photo{max-width:420px;margin:0 auto}
+  .reviews{columns:2}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .burger{display:flex}
+  .navlinks{position:fixed;inset:0 0 0 auto;width:min(82vw,330px);background:var(--purple);
+    flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:40px;
+    transform:translateX(100%);transition:transform .35s ease;box-shadow:var(--shadow-lg)}
+  .navlinks.open{transform:translateX(0)}
+  .navlinks a.link{color:#fff !important;font-size:1.2rem}
+  header.scrolled .navlinks a.link{color:#fff}
+  .nav-cta{width:100%;text-align:center}
+  .sec{padding:60px 0}
+  .services-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .reviews{columns:1}
+  .foot-grid{grid-template-columns:1fr}
+  .about-photo .seal{width:84px;height:84px;right:0;bottom:-20px}
+  .hero{min-height:auto;padding:130px 0 60px}
+  .hero-cta .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto !important}
+  .reveal{transition:none;opacity:1;transform:none}
+  .btn,.svc,.car-btn,.socials a{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="nav">
+    <a href="#hero" class="brand" aria-label="Самурай - начало">
+      <img src="assets/img/logo.png" alt="Лого Самурай - В служба на вас" />
+      <span><b>Самурай</b><small>В служба на вас</small></span>
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="Основна навигация">
+      <a class="link" href="#about">За мен</a>
+      <a class="link" href="#services">Услуги</a>
+      <a class="link" href="#offer">Оферта</a>
+      <a class="link" href="#reviews">Отзиви</a>
+      <a class="link" href="#contact">Контакти</a>
+      <a class="btn btn-primary nav-cta" href="#signup">Запиши се</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow" style="color:var(--teal)">Здраве · Сила · Живот</span>
+    <h1>Промени живота си, започвайки от <span class="accent">тялото и мислите</span></h1>
+    <p class="lead">Персонални и групови тренировки, планински преходи и хранителен режим с Атанас Костадинов, медицинско лице и сертифициран планински водач.</p>
+    <div class="badges">
+      <span class="badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>Медицинско лице</span>
+      <span class="badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8 3 4 8 5-5 5 15H2L8 3Z"/></svg>Сертифициран планински водач</span>
+      <span class="badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 0 0-3-3.87M9 20H4v-2a4 4 0 0 1 3-3.87m6-1.13a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"/></svg>2000+ тренирани</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-teal" href="#signup">Запиши консултация за 40€</a>
+      <a class="btn btn-ghost" href="#offer">Безплатна тренировка на плажа</a>
+    </div>
+    <div class="hero-rating">
+      <span class="stars">★★★★★</span>
+      <span>5,0 от 11 отзива в Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="assets/img/portrait.jpg" alt="Атанас Костадинов, треньор" loading="lazy" />
+      <div class="seal"><img src="assets/img/logo.png" alt="Лого Самурай" /></div>
+    </div>
+    <div class="about-body reveal">
+      <span class="eyebrow">За мен</span>
+      <h2>Атанас Костадинов</h2>
+      <p>Казвам се <strong>Атанас Костадинов</strong> и помагам на хората да променят живота си, започвайки от тялото и мислите. Като <strong>медицинско лице с над 10 години опит</strong> и работа с пациенти, подхождам към всеки човек индивидуално и отговорно.</p>
+      <p>Водя <strong>групови и индивидуални тренировки в зала</strong>, организирам <strong>планински преходи</strong> като сертифициран планински водач и водя загрявки преди маратони и спортни събития в цялата страна, с над <strong>2000 човека</strong>.</p>
+      <p>Концепцията ми <strong>„Здраве, Сила и Живот"</strong> съчетава функционални тренировки, здравословно хранене и позитивно мислене.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h4>Консултация</h4><p>Опознаваме твоите нужди, цели и навици.</p></div>
+        <div class="step"><div class="num">2</div><h4>Персонална програма</h4><p>Тренировки и хранителен режим само за теб.</p></div>
+        <div class="step"><div class="num">3</div><h4>Резултат</h4><p>Устойчиви здравословни навици и форма.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Какво предлагам</span>
+      <h2>Услуги</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="services-grid">
+      <article class="svc reveal" style="background-image:url('assets/img/warmup-crowd1.jpg')">
+        <div class="svc-body">
+          <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 0 0-3-3.87M9 20H4v-2a4 4 0 0 1 3-3.87m6-1.13a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm6 1a3 3 0 1 0-2-5.24M8 9a3 3 0 1 0 0 0Z"/></svg></div>
+          <h3>Групови тренировки в зала</h3>
+          <p>Динамични функционални тренировки в група, които зареждат с енергия, сила и мотивация.</p>
+        </div>
+      </article>
+      <article class="svc reveal" style="background-image:url('assets/img/coach-arms.jpg')">
+        <div class="svc-body">
+          <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.5 6.5 17.5 17.5M3 9h2v6H3zm16 0h2v6h-2zM5 12h2m10 0h2M8 12h8"/></svg></div>
+          <h3>Индивидуални тренировки</h3>
+          <p>Персонално внимание и програма, съобразена изцяло с твоето тяло, цели и темпо.</p>
+        </div>
+      </article>
+      <article class="svc reveal" style="background-image:url('assets/img/run-action.jpg')">
+        <div class="svc-body">
+          <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m3 20 6-9 4 4 3-5 5 10H3Z"/></svg></div>
+          <h3>Организирани планински преходи</h3>
+          <p>Безопасни преходи сред природата с сертифициран планински водач и медицинско лице.</p>
+        </div>
+      </article>
+      <article class="svc reveal" style="background-image:url('assets/img/host-stage1.jpg')">
+        <div class="svc-body">
+          <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 1v11m0 0a3 3 0 0 0 3-3V4a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Zm-7 0a7 7 0 0 0 14 0M12 19v4M8 23h8"/></svg></div>
+          <h3>Загрявки за маратони и събития</h3>
+          <p>Професионални загрявки преди маратони и спортни събития в цялата страна.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="sec offer" id="offer">
+  <div class="wrap offer-grid">
+    <div class="offer-text reveal">
+      <span class="eyebrow">Специална оферта</span>
+      <h2>Консултация за 40€ и <span class="accent">безплатна тренировка на плажа</span></h2>
+      <p>Консултацията включва изготвяне на персонална програма за изграждане на здравословни навици и хранителен режим, съобразен с твоите индивидуални нужди и предпочитания.</p>
+      <ul class="offer-list">
+        <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg>Персонална програма за здравословни навици</li>
+        <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg>Хранителен режим спрямо твоите нужди и предпочитания</li>
+        <li><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg>От медицинско лице с над 10 години опит и работа с пациенти</li>
+      </ul>
+      <div class="price-row">
+        <div class="price-chip"><div class="big">40€</div><div class="lbl">Консултация</div></div>
+        <div class="price-chip"><div class="big">Безплатно</div><div class="lbl">Тренировка на плажа</div></div>
+      </div>
+      <a class="btn btn-teal" href="#signup">Запиши се сега</a>
+    </div>
+    <div class="offer-photo reveal">
+      <img src="assets/img/beach.jpg" alt="Тренировка на плажа в Бургас" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">В действие</span>
+      <h2>Тренировки и събития</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="wrap carousel-wrap">
+    <div class="carousel" id="carousel">
+      <div class="slide"><img src="assets/img/host-duo.jpg" alt="Атанас води спортно събитие" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/warmup-arms.jpg" alt="Загрявка преди маратон" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/host-stage1.jpg" alt="Атанас на сцена пред публика" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/run-action.jpg" alt="Атанас бяга маратон" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/warmup-crowd2.jpg" alt="Групова загрявка с деца" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/beach-pushups.jpg" alt="Тренировка на плажа" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/run-road.jpg" alt="Бягане на маратон" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/host-stage2.jpg" alt="Водещ на спортно събитие" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/warmup-lead.jpg" alt="Атанас води загрявка" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/coach-arms.jpg" alt="Атанас Костадинов" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/outdoor-pushups.jpg" alt="Тренировка на открито" loading="lazy"></div>
+      <div class="slide"><img src="assets/img/warmup-crowd1.jpg" alt="Загрявка с над 2000 човека" loading="lazy"></div>
+    </div>
+    <div class="car-btns">
+      <button class="car-btn" id="carPrev" aria-label="Предишни снимки"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m15 19-7-7 7-7"/></svg></button>
+      <button class="car-btn" id="carNext" aria-label="Следващи снимки"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Какво казват клиентите</span>
+      <h2>Отзиви</h2>
+      <div class="divider"></div>
+    </div>
+    <div style="text-align:center">
+      <div class="rev-badge reveal">
+        <svg class="g" viewBox="0 0 48 48"><path fill="#4285F4" d="M45 24c0-1.4-.13-2.75-.36-4H24v8h11.8c-.5 2.7-2.06 5-4.38 6.55v5.45h7.08C42.6 36.2 45 30.6 45 24Z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.08-5.45c-1.97 1.32-4.49 2.1-7.48 2.1-5.75 0-10.62-3.88-12.36-9.1H4.34v5.7C7.96 41.07 15.4 46 24 46Z"/><path fill="#FBBC05" d="M11.64 28.22c-.44-1.32-.69-2.73-.69-4.22s.25-2.9.69-4.22v-5.7H4.34A21.98 21.98 0 0 0 2 24c0 3.55.85 6.9 2.34 9.92l7.3-5.7Z"/><path fill="#EA4335" d="M24 9.5c3.24 0 6.15 1.11 8.44 3.3l6.29-6.29C34.9 2.86 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.08l7.3 5.7C13.38 13.38 18.25 9.5 24 9.5Z"/></svg>
+        <div style="text-align:left">
+          <div class="score">5,0</div>
+          <div class="stars2">★★★★★</div>
+        </div>
+        <div class="sub">11 отзива<br>в Google</div>
+      </div>
+    </div>
+    <div class="reviews reveal">
+      <div class="review"><div class="stars2">★★★★★</div><p>Страхотно място и много приятелски настроен, спокоен треньор! След един час тренировка си тръгваш с усмивка, добре натоварен и доволен от това, което си направил. Препоръчвам Наско като треньор!</p><div class="who"><div class="av">Д</div><div><b>Димитър Пенджуров</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>В залата е супер! Това е място, на което има отношение към спорта и здравето. Тренировките ми носят много енергия, заряд и мотивация. Наско е винаги усмихнат.</p><div class="who"><div class="av">К</div><div><b>Кремена Васева</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>Невероятен професионалист! Персонално отношение и много внимателно обяснява всичко. Препоръчвам Наско на всеки, който иска да се погрижи за здравето си.</p><div class="who"><div class="av">М</div><div><b>Маргарита Стаматова</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>Тренировките са много добре балансирани. Треньорът Наско се раздава и ни мотивира да даваме най-доброто от себе си. За няколко месеца чувствам как оформих мускулатура и съм в тонус.</p><div class="who"><div class="av">М</div><div><b>Мария Иванова</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>Тренировките в залата носят много заряд и положителна трансформация. Препоръчвам за всеки, който има нужда от промяна, както и да поддържа своята най-добра форма и здраве.</p><div class="who"><div class="av">С</div><div><b>Стелсито Петкова</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>Залата е нова и чиста. Концепцията е на линия. Треньорът е мотиватор и пример за подражание, разбира от работата си и е добър човек, което е по-важно от всичко.</p><div class="who"><div class="av">З</div><div><b>ZEO</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>Ако търсите място с позитивна енергия, хора, индивидуален подход, атмосфера и най-позитивни емоции, това е мястото!</p><div class="who"><div class="av">П</div><div><b>Пламена Шубелиева</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>Тренировките са винаги на високо ниво. Отлична динамика, интензивно натоварване и разнообразни упражнения. Треньорът е истински професионалист.</p><div class="who"><div class="av">И</div><div><b>Ирина Кобрянова</b><span>Google отзив</span></div></div></div>
+      <div class="review"><div class="stars2">★★★★★</div><p>Място, на което веднъж отидеш ли, вече си подобрен!</p><div class="who"><div class="av">В</div><div><b>Ванеса Захариева</b><span>Google отзив</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNUP FORM -->
+<section class="sec signup" id="signup">
+  <div class="wrap form-grid">
+    <div class="form-info reveal">
+      <span class="eyebrow" style="color:var(--teal)">Запиши се</span>
+      <h2>Започни <span class="accent">днес</span></h2>
+      <p>Остави данните си и ще се свържа с теб за час за консултация и безплатната ти тренировка на плажа.</p>
+      <div class="contact-line"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 5a2 2 0 0 1 2-2h2.6a1 1 0 0 1 .96.73l1.1 4a1 1 0 0 1-.27 1L7 10.5a14 14 0 0 0 6.5 6.5l1.77-1.4a1 1 0 0 1 1-.26l4 1.1a1 1 0 0 1 .73.95V20a2 2 0 0 1-2 2A18 18 0 0 1 2 5Z"/></svg><a href="tel:+359884373639">088 437 3639</a></div>
+      <div class="contact-line"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v14H3zM3 7l9 6 9-6"/></svg><a href="mailto:zdrave.sila.jivot@gmail.com">zdrave.sila.jivot@gmail.com</a></div>
+      <div class="contact-line"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>бул. „Стефан Стамболов" 43, Бургас</span></div>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="signupForm" novalidate>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="field">
+          <label for="name">Име <span class="req">*</span></label>
+          <input id="name" name="Име" type="text" required autocomplete="name" placeholder="Твоето име" />
+        </div>
+        <div class="field">
+          <label for="email">Имейл <span class="req">*</span></label>
+          <input id="email" name="Имейл" type="email" required autocomplete="email" placeholder="example@mail.com" />
+        </div>
+        <div class="field">
+          <label for="phone">Телефон <span class="req">*</span></label>
+          <input id="phone" name="Телефон" type="tel" required autocomplete="tel" placeholder="08XX XXX XXX" />
+        </div>
+        <div class="field">
+          <label for="service">Услуга</label>
+          <select id="service" name="Услуга">
+            <option>Консултация за 40€</option>
+            <option>Групови тренировки в зала</option>
+            <option>Индивидуални тренировки</option>
+            <option>Организиран планински преход</option>
+            <option>Загрявка за маратон / събитие</option>
+            <option>Безплатна тренировка на плажа</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Съобщение</label>
+          <textarea id="msg" name="Съобщение" placeholder="Разкажи накратко за целите си (по желание)"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Изпрати заявка</button>
+        <p class="form-note">Изпращайки формата, се съгласяваш да се свържем с теб относно твоето запитване.</p>
+        <div class="form-msg" id="formMsg" role="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/img/logo.png" alt="Лого Самурай" />
+          <span><b>Самурай</b><small>В служба на вас</small></span>
+        </div>
+        <p style="font-size:.95rem;max-width:300px">Здраве, Сила и Живот. Тренировки, планински преходи и хранителен режим с Атанас Костадинов, Бургас.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/naskokostadinov/" target="_blank" rel="noopener" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.8c-3.14 0-3.51.01-4.75.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71C3.21 8.49 3.2 8.86 3.2 12s.01 3.51.07 4.75c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.19-1.38-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32C15.51 4.01 15.14 4 12 4Zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.94 4.94 0 0 1 12 7.06Zm0 8.14A3.2 3.2 0 1 0 8.8 12a3.2 3.2 0 0 0 3.2 3.2Zm6.3-8.34a1.15 1.15 0 1 1-1.15-1.15 1.15 1.15 0 0 1 1.15 1.15Z"/></svg></a>
+          <a href="https://www.facebook.com/nasko.kostadinov.5" target="_blank" rel="noopener" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <div class="fline"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>ж.к. Братя Миладинови,<br>бул. „Стефан Стамболов" 43,<br>8001 Бургас</span></div>
+        <div class="fline"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 5a2 2 0 0 1 2-2h2.6a1 1 0 0 1 .96.73l1.1 4a1 1 0 0 1-.27 1L7 10.5a14 14 0 0 0 6.5 6.5l1.77-1.4a1 1 0 0 1 1-.26l4 1.1a1 1 0 0 1 .73.95V20a2 2 0 0 1-2 2A18 18 0 0 1 2 5Z"/></svg><a href="tel:+359884373639">088 437 3639</a></div>
+        <div class="fline"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v14H3zM3 7l9 6 9-6"/></svg><a href="mailto:zdrave.sila.jivot@gmail.com">zdrave.sila.jivot@gmail.com</a></div>
+      </div>
+      <div>
+        <h4>Намери ме</h4>
+        <div class="map-embed">
+          <iframe title="Локация в Бургас" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%D0%A1%D1%82%D0%B5%D1%84%D0%B0%D0%BD%20%D0%A1%D1%82%D0%B0%D0%BC%D0%B1%D0%BE%D0%BB%D0%BE%D0%B2%2043%2C%20%D0%91%D1%83%D1%80%D0%B3%D0%B0%D1%81&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Самурай · Атанас Костадинов. Всички права запазени.</span>
+      <span>Здраве · Сила · Живот</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sticky header
+const header=document.getElementById('header');
+const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);
+onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+// Mobile nav
+const burger=document.getElementById('burger');
+const navlinks=document.getElementById('navlinks');
+burger.addEventListener('click',()=>{
+  const open=navlinks.classList.toggle('open');
+  burger.classList.toggle('open',open);
+  burger.setAttribute('aria-expanded',open);
+});
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navlinks.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded',false);
+}));
+
+// Carousel
+const carousel=document.getElementById('carousel');
+const step=()=>Math.min(carousel.clientWidth*0.85,420);
+document.getElementById('carNext').addEventListener('click',()=>carousel.scrollBy({left:step(),behavior:'smooth'}));
+document.getElementById('carPrev').addEventListener('click',()=>carousel.scrollBy({left:-step(),behavior:'smooth'}));
+
+// Reveal on scroll
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Year
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// Form submit -> FormSubmit AJAX + Meta Pixel Lead
+const form=document.getElementById('signupForm');
+const msg=document.getElementById('formMsg');
+const btn=document.getElementById('submitBtn');
+form.addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  msg.className='form-msg';msg.textContent='';
+  // basic validation
+  if(!form.checkValidity()){
+    form.reportValidity();return;
+  }
+  if(form._honey.value){return;} // spam bot
+  btn.disabled=true;const old=btn.textContent;btn.textContent='Изпращане...';
+  const data={};
+  new FormData(form).forEach((v,k)=>{if(k!=='_honey')data[k]=v;});
+  data._subject='Ново запитване от сайта - Самурай';
+  data._template='table';
+  try{
+    const res=await fetch('https://formsubmit.co/ajax/zdrave.sila.jivot@gmail.com',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(data)
+    });
+    const out=await res.json();
+    if(res.ok&&(out.success===true||out.success==='true')){
+      if(window.fbq){fbq('track','Lead',{content_name:data['Услуга']||'Запитване'});}
+      msg.className='form-msg ok';
+      msg.textContent='Благодаря! Заявката е изпратена успешно. Ще се свържа с теб възможно най-скоро.';
+      form.reset();
+    }else{
+      throw new Error('fail');
+    }
+  }catch(err){
+    msg.className='form-msg err';
+    msg.innerHTML='Възникна грешка. Опитай отново или се обади на <a href="tel:+359884373639" style="color:inherit;text-decoration:underline">088 437 3639</a>.';
+  }finally{
+    btn.disabled=false;btn.textContent=old;
+  }
+});
+</script>
+</body>
+</html>

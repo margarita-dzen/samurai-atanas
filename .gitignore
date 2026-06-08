@@ -1,0 +1,4 @@
+.vercel
+.DS_Store
+preview-*.png
+node_modules
