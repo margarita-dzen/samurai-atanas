@@ -687,6 +687,10 @@ form.addEventListener('submit',async(e)=>{
       msg.className='form-msg ok';
       msg.textContent='Благодаря! Заявката е изпратена успешно. Ще се свържа с теб възможно най-скоро.';
       form.reset();
+    }else if(out && /activat|confirm|потвърд/i.test(String(out.message||''))){
+      msg.className='form-msg ok';
+      msg.textContent='Заявката е приета! Формата се активира еднократно: моля потвърдете от имейла, който току-що изпратихме, и след това всички запитвания пристигат автоматично.';
+      form.reset();
     }else{
       throw new Error('fail');
     }
